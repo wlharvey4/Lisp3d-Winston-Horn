@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-25 08:23:50 minilolh>
+;;; Time-stamp: <2023-09-25 08:31:01 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -22,8 +22,13 @@
   (is (eq t nil)))
 
 (def-suite :lisp3d-tests-chapter-5
-  :description "Tests for Chapter 5."
-  (is (eq t t)))
+  :description "Tests for Chapter 5.")
+
+(in-suite :lisp3d-tests-chapter-5)
+
+(test :dummytest-chapter
+      "Placeholder for a chapter 5 test."
+      (is (eq t t)))
 
 (defun lisp3d-run-all-tests ()
   "Main procdure to run all tests for the lisp3d system."
