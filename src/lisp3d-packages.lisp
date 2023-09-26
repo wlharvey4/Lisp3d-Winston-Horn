@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-09-25 22:28:43 wlh>
+;;; Time-stamp: <2023-09-25 23:33:56 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -13,6 +13,7 @@
   (:use :cl)
   (:export
    ;; Problem 5-1
-   :skip-first-n))
+   :skip-first-n
+   :keep-first-n))
 
 ;;; End lisp3d-packages.lisp

@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-25 22:53:24 wlh>
+;;; Time-stamp: <2023-09-25 23:39:00 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -10,12 +10,15 @@
 
 (in-package :lisp3d-tests)
 
-(test dummytest
-  (is (eq t t))
-  (is (zerop 0)))
+;; (test dummytest
+;;   (is (eq t t))
+;;   (is (zerop 0)))
 
 (test chapter-5-tests
-  (is (equal (skip-first-n 3 '(a b c d e f g h))
-	     '(d e f g h))))
+  (is (equal (skip-first-n 3 '(a b c d e f g h i))
+	     '(d e f g h i)))
+  (is (equal (keep-first-n 3 '(a b c d e f g h i))
+	     '(a b c))))
+
 
 ;;; End lisp3d-main-test.lisp

@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-25 22:29:31 wlh>
+;;; Time-stamp: <2023-09-25 23:29:14 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -21,5 +21,15 @@
 (defun skip-first-n (n l)
   (if (zerop n) l
       (skip-first-n (1- n) (rest l))))
+
+;;; Problem 5-2
+;;  Write a procedure, KEEP-FIRST-N, not tail-recursive, that returns a
+;;  a list of the first N elements in a list.You may assume there are at
+;;  least N elements.
+
+(defun keep-first-n (n l)
+  (if (zerop n) nil
+      (cons (first l)
+	    (keep-first-n (1- n) (rest l)))))
 
 ;;; End lisp3d.lisp
