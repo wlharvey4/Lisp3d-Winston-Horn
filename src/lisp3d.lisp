@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-25 08:09:58 minilolh>
+;;; Time-stamp: <2023-09-25 22:29:31 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -11,12 +11,12 @@
 
 ;;; Code:
 
-(in-package :lolh/lisp3d-chapter5)
+(in-package :lolh/lisp3d-chapter-5)
 
 ;;; Problem 5-1
-;;  Ignoring the existence of NTHCDR, the primitive supplied by Lisp itself, write
-;;  a tail recursive procedure, SKIP-FIRST-N that trims off the first `n' elements
-;;  from a list and returns the rest.
+;;  Ignoring the existence  of NTHCDR, the primitive  supplied by Lisp
+;;  itself, write a tail  recursive procedure, SKIP-FIRST-N that trims
+;;  off the first `n' elements from a list and returns the rest.
 
 (defun skip-first-n (n l)
   (if (zerop n) l
