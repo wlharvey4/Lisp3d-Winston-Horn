@@ -1,5 +1,5 @@
 ;;; lisp3d.asd - ASD file for Lisp3d Edition by Winston-Horn
-;;; Time-stamp: <2023-09-26 00:11:50 minilolh>
+;;; Time-stamp: <2023-09-26 00:18:52 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -9,7 +9,7 @@
 
 ;;; Code:
 
-(defsystem "lisp3d"
+(defsystem "lolh-lisp3d"
   :description "Problems from Lisp3d by Winston and Horn"
   :version "0.2.2"
   :author "LOLH"
@@ -18,14 +18,14 @@
                 :components ((:file "lisp3d-packages")
                              (:file "lisp3d"
 			      :depends-on ("lisp3d-packages")))))
-  :in-order-to ((test-op (test-op "lisp3d/tests"))))
+  :in-order-to ((test-op (test-op "lolh-lisp3d/tests"))))
 
-(defsystem "lisp3d/tests"
+(defsystem "lolh-lisp3d/tests"
   :description "Tests for Lisp3d by Winston-Horn"
   :version "0.2.2"
   :author "LOLH"
   :license "CCO 1.0 Universal"
-  :depends-on ("1am" "lisp3d")
+  :depends-on ("1am" "lolh-lisp3d")
   :components ((:module "t"
                 :components ((:file "lisp3d-tests-package")
                              (:file "lisp3d-tests-main"
