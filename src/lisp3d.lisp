@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-26 00:09:15 minilolh>
+;;; Time-stamp: <2023-09-26 14:47:44 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -48,5 +48,15 @@
                                  (rest l)
                                  (cons (first l)
                                        trl))))
+
+;;; Problem 5-4
+;;  The Lisp primitives 1+ and 1- increment and decrement a number by one.
+;;  Using 1+ and 1-, write a recursive procedure, ADD, for adding two numbers
+;;  without +.  Assume that both numbers are positive.
+
+(defun add (x y)
+  (if (zerop y)
+      x
+      (add (1+ x) (1- y))))
 
 ;;; End lisp3d.lisp
