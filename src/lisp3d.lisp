@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-26 14:47:44 minilolh>
+;;; Time-stamp: <2023-09-26 15:14:57 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -58,5 +58,18 @@
   (if (zerop y)
       x
       (add (1+ x) (1- y))))
+
+;;; Problem 5-5 The Tower of Hanoi
+;;  Suppose TOWER-OF-HANOI is to count the number of moves required to move a
+;;  list of pins from one pin to another, given a list of disks.  Define
+;;  TOWER-OF-HANOI.
+
+(defun tower-of-hanoi (l)
+  (if (endp l)
+      0
+      (+
+       (tower-of-hanoi (rest l))
+       1
+       (tower-of-hanoi (rest l)))))
 
 ;;; End lisp3d.lisp
