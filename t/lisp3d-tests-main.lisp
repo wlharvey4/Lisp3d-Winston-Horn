@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-25 08:31:01 minilolh>
+;;; Time-stamp: <2023-09-25 22:53:24 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -10,28 +10,12 @@
 
 (in-package :lisp3d-tests)
 
-(def-suite :lisp3d-all-tests
-  :description "Suite containing all tests for lisp3d")
-
-(in-suite :lisp3d-all-tests)
-
-(test :dummytest
-  "Placeholder to check that the test system is operational."
+(test dummytest
   (is (eq t t))
-  (is (not (eq nil t)))
-  (is (eq t nil)))
+  (is (zerop 0)))
 
-(def-suite :lisp3d-tests-chapter-5
-  :description "Tests for Chapter 5.")
-
-(in-suite :lisp3d-tests-chapter-5)
-
-(test :dummytest-chapter
-      "Placeholder for a chapter 5 test."
-      (is (eq t t)))
-
-(defun lisp3d-run-all-tests ()
-  "Main procdure to run all tests for the lisp3d system."
-  (run! :lisp3d-all-tests))
+(test chapter-5-tests
+  (is (equal (skip-first-n 3 '(a b c d e f g h))
+	     '(d e f g h))))
 
 ;;; End lisp3d-main-test.lisp
