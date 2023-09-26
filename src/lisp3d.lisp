@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-25 23:29:14 wlh>
+;;; Time-stamp: <2023-09-26 00:09:15 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -31,5 +31,22 @@
   (if (zerop n) nil
       (cons (first l)
 	    (keep-first-n (1- n) (rest l)))))
+
+;;; Problem 5-3
+;;  Now write a pair of procedures KEEP-FIRST-N-CLEVERLY and
+;;  KEEP-FIRST-N-CLEVERLY-AUX, that together make a list of the first N
+;;  elements in a list.  Be sure that KEEP-FIRST-N-CLEVERLY-AUX is
+;;  tail-recursive.
+
+(defun keep-first-n-cleverly (n l)
+  (keep-first-n-cleverly-aux n l nil))
+
+(defun keep-first-n-cleverly-aux (n l trl)
+  (if (zerop n)
+      (reverse trl)
+      (keep-first-n-cleverly-aux (1- n)
+                                 (rest l)
+                                 (cons (first l)
+                                       trl))))
 
 ;;; End lisp3d.lisp
