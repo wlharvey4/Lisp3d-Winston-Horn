@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-26 15:14:57 minilolh>
+;;; Time-stamp: <2023-09-27 03:48:13 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -71,5 +71,14 @@
        (tower-of-hanoi (rest l))
        1
        (tower-of-hanoi (rest l)))))
+
+;;; Problem 5-8 PRESENTP
+
+(defun presentp (e f)
+  (cond ((atom f) (eql e f))
+	((endp f) nil)
+	(t (or (presentp e (first f))
+	       (presentp e (rest f))))))
+
 
 ;;; End lisp3d.lisp
