@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-27 03:48:13 wlh>
+;;; Time-stamp: <2023-09-28 00:51:45 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -73,6 +73,10 @@
        (tower-of-hanoi (rest l)))))
 
 ;;; Problem 5-8 PRESENTP
+;;  Define PRESENTP, a predicate that determines whehter a given atom occurs anywhere
+;;  in an expression.   PRESENTP differs from MEMBER in that MEMBER looks oinly for
+;;  topo-level instances.  Symbolic-mathematics systems make use of a procedure like
+;;  PRESENTP to determine if an expression contains a particular variable.
 
 (defun presentp (e f)
   (cond ((atom f) (eql e f))

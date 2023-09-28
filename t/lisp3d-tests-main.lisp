@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-27 03:44:39 wlh>
+;;; Time-stamp: <2023-09-28 00:53:23 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -37,7 +37,7 @@
              1023)))
 
 (test chapter-5-tests-problem-5-8
-  (let ((formula '(sqrt (- (sqr x) (sqr y)))))
+  (let ((formula '(sqrt (/ (+ (expt x 2) (expt y 2)) 2))))
     (is (equal (presentp 'x formula)
 	       t))
     (is (equal (presentp 'z formula)
