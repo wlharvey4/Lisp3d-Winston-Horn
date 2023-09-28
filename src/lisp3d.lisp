@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-28 00:51:45 minilolh>
+;;; Time-stamp: <2023-09-28 02:11:13 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -84,5 +84,13 @@
 	(t (or (presentp e (first f))
 	       (presentp e (rest f))))))
 
+;;; Problem 5-9 SQUASH
+;;  Define SQUASH, a procedure that takes an expression as its argument and returns a
+;;  nonnested list of all atoms found in the expression.  Essentially, this procedure
+;;  explores the fringe of the tree represented by the list given as its argument, and
+;;  return a list of all the leaves.
+
+(defun squash (nested)
+  )
 
 ;;; End lisp3d.lisp

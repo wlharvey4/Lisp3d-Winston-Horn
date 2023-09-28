@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-28 00:53:23 minilolh>
+;;; Time-stamp: <2023-09-28 00:58:40 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -37,10 +37,13 @@
              1023)))
 
 (test chapter-5-tests-problem-5-8
-  (let ((formula '(sqrt (/ (+ (expt x 2) (expt y 2)) 2))))
+  (let ((formula '(sqrt (/ (+ (expt x 2) (expt y 2)) 2)))
+        (nested '(a (a (a (a b))) (((a b) b) b) b)))
     (is (equal (presentp 'x formula)
 	       t))
     (is (equal (presentp 'z formula)
-	       nil))))
+	       nil))
+    (is (equal (squash nested)
+               (a a a a b a b b b b)))))
 
 ;;; End lisp3d-main-test.lisp
