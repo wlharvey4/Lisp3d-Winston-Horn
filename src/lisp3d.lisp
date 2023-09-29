@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-28 02:11:13 minilolh>
+;;; Time-stamp: <2023-09-28 21:50:51 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -91,6 +91,13 @@
 ;;  return a list of all the leaves.
 
 (defun squash (nested)
-  )
+  (squash-helper nested nil))
+
+(defun squash-helper (n l)
+  (cond ((endp n) l)
+	((atom (first n))
+	 (cons (first n) (squash-helper (rest n) l)))
+	((listp (first n))
+	 (squash-helper (first n) (squash-helper (rest n) l)))))
 
 ;;; End lisp3d.lisp

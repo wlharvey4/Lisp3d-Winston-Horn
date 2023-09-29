@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-28 00:58:40 minilolh>
+;;; Time-stamp: <2023-09-28 21:56:36 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -44,6 +44,6 @@
     (is (equal (presentp 'z formula)
 	       nil))
     (is (equal (squash nested)
-               (a a a a b a b b b b)))))
+               '(a a a a b a b b b b)))))
 
 ;;; End lisp3d-main-test.lisp
