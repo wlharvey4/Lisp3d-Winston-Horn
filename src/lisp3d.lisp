@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-28 22:07:10 wlh>
+;;; Time-stamp: <2023-09-29 17:52:14 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -93,7 +93,12 @@
 ;;  the tree represented by the list given as its argument, and return
 ;;  a list of all the leaves.
 
-(defun squash (nested)
+(defun squash (l)
+  (cond ((null l) nil)
+        ((atom l) (list l))
+        (t (append (squash (first l)) (squash (rest l))))))
+
+(defun squash-h (nested)
   (squash-helper nested nil))
 
 (defun squash-helper (n l)
