@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-10-01 09:00:51 wlh>
+;;; Time-stamp: <2023-10-01 09:23:28 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -127,5 +127,14 @@
   (if (eql c n) n1
       (fibonnaci n (1+ c) (+ n1 n2) n1)))
 
+;;; Problenm 5-13 TAIL-RECURSIVE-EXPT
+;;  Define TAIL-RECURSIVE-EXPT,  a version  of RECURSIVE-EXPT  that is
+;;  tail recursive.  Use an  optional parameter to  accumulate partial
+;;  results.   This approach  represents  a common  way  of turning  a
+;;  singly recursive procedure into a tail recursive procedure.
+
+(defun tail-recursive-expt (x y &optional (ans 1))
+  (if (zerop y) ans
+      (tail-recursive-expt x (1- y) (* ans x))))
 
 ;;; End lisp3d.lisp

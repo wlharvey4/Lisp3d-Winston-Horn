@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-01 08:50:38 wlh>
+;;; Time-stamp: <2023-10-01 09:14:59 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -64,6 +64,8 @@
   (is (equal (fibonnaci 5)
 	     8))
   (is (equal (fibonnaci 6)
-	     13)))
+	     13))
+  (is (equal (tail-recursive-expt 3 4)
+	     81)))
 
 ;;; End lisp3d-main-test.lisp
