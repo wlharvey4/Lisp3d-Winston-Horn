@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-10-01 09:23:28 wlh>
+;;; Time-stamp: <2023-10-01 09:28:45 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -136,5 +136,14 @@
 (defun tail-recursive-expt (x y &optional (ans 1))
   (if (zerop y) ans
       (tail-recursive-expt x (1- y) (* ans x))))
+
+;;; Problem 5-14 TAIL-RECURSIVE-REVERSE
+;;  Define TAIL-RECURSIVE-REVERSE, ignoring  the existence of REVERSE,
+;;  a primitive supplied  by Lisp itself. Use the same  approach as in
+;;  the previous problem.
+
+(defun tail-recursive-reverse (l &optional (ans ()))
+  (if (endp l) ans
+      (tail-recursive-reverse (rest l) (cons (first l) ans))))
 
 ;;; End lisp3d.lisp

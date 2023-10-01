@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-10-01 09:15:23 wlh>
+;;; Time-stamp: <2023-10-01 09:29:59 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -32,6 +32,8 @@
    ;; Problem 5-12
    :fibonnaci
    ;; Problem 5-13
-   :tail-recursive-expt))
+   :tail-recursive-expt
+   ;; Problem 5-14
+   :tail-recursive-reverse))
 
 ;;; End lisp3d-packages.lisp
