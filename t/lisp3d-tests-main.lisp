@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-30 23:19:03 wlh>
+;;; Time-stamp: <2023-10-01 08:50:38 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -51,5 +51,19 @@
 ;;; Problem 5-11 PUNCTUATE
 ;;  The tests always fail when an &optional parameter is used.
 ;;  Seems to be a bug.
+
+(test chapter-5-tests-problems-5-12+
+  (is (equal (fibonnaci 1)
+	     1))
+  (is (equal (fibonnaci 2)
+	     2))
+  (is (equal (fibonnaci 3)
+	     3))
+  (is (equal (fibonnaci 4)
+	     5))
+  (is (equal (fibonnaci 5)
+	     8))
+  (is (equal (fibonnaci 6)
+	     13)))
 
 ;;; End lisp3d-main-test.lisp

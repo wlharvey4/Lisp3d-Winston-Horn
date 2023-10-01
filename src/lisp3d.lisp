@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-30 22:58:15 wlh>
+;;; Time-stamp: <2023-10-01 09:00:51 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -113,5 +113,19 @@
 
 (defun punctuate (l &optional (mark 'PERIOD))
   (append l (list mark)))
+
+;;; Problem 5-12 FIBONNACI
+;;  Create a FIBONNACI procedure that uses optional parameters and is
+;;  more efficient than the simple procedure.
+
+(defun fibonnaci (n &optional (c 1) (n1 1) (n2 1))
+  "Fibonnaci that stores the previous two solutions in optional
+   parameters.  N is the number to calculate.  C is the number of the
+   current iteration.  N1 is the value of the current calculation and
+   is the sum of the prior two calculations. N2 is the value of the
+   prior calculation."
+  (if (eql c n) n1
+      (fibonnaci n (1+ c) (+ n1 n2) n1)))
+
 
 ;;; End lisp3d.lisp
