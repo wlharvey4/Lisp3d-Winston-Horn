@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-09-29 17:52:14 minilolh>
+;;; Time-stamp: <2023-09-30 22:58:15 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -107,5 +107,11 @@
 	 (cons (first n) (squash-helper (rest n) l)))
 	((listp (first n))
 	 (squash-helper (first n) (squash-helper (rest n) l)))))
+
+;;; Problem 5-11 PUNCTUATE
+;;
+
+(defun punctuate (l &optional (mark 'PERIOD))
+  (append l (list mark)))
 
 ;;; End lisp3d.lisp

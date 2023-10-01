@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-09-29 17:46:39 minilolh>
+;;; Time-stamp: <2023-09-30 22:42:03 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -26,6 +26,8 @@
    :presentp
    ;; Problem 5-9
    :squash
-   :squash-h))
+   :squash-h
+   ;; Problem 5-11
+   :punctuate))
 
 ;;; End lisp3d-packages.lisp

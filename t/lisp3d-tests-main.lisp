@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-09-29 17:55:50 minilolh>
+;;; Time-stamp: <2023-09-30 23:19:03 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -47,5 +47,9 @@
                '(a a a a b a b b b b)))
     (is (equal (squash-h nested)
                '(a a a a b a b b b b)))))
+
+;;; Problem 5-11 PUNCTUATE
+;;  The tests always fail when an &optional parameter is used.
+;;  Seems to be a bug.
 
 ;;; End lisp3d-main-test.lisp
