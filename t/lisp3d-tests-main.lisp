@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-01 09:29:33 wlh>
+;;; Time-stamp: <2023-10-01 09:41:19 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -68,6 +68,8 @@
   (is (equal (tail-recursive-expt 3 4)
 	     81))
   (is (equal (tail-recursive-reverse '(a b c))
-	     '(c b a))))
+	     '(c b a)))
+  (is (equal (clever-count-atoms '(sqrt (/ (+ (expt x 2) (expt y 2)) 2)))
+	     10)))
 
 ;;; End lisp3d-main-test.lisp

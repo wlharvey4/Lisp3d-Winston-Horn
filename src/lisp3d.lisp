@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-10-01 09:28:45 wlh>
+;;; Time-stamp: <2023-10-01 10:08:17 wlh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -145,5 +145,18 @@
 (defun tail-recursive-reverse (l &optional (ans ()))
   (if (endp l) ans
       (tail-recursive-reverse (rest l) (cons (first l) ans))))
+
+;;; Problem 5-15 CLEVER-COUNT-ATOMS
+;;  Define CLEVER-COUNT-ATOMS,  a version of COUNT-ATOMS  that uses an
+;;  optional parameter  to hang onto  the count accumulated so  far in
+;;  exploring one part of the tree.
+
+(defun clever-count-atoms (tree &optional (count 0))
+  (cond ((null tree) count)
+	((atom tree) (1+ count))
+	(t
+	 (clever-count-atoms (first tree)
+			     (clever-count-atoms (rest tree) count)))))
+
 
 ;;; End lisp3d.lisp
