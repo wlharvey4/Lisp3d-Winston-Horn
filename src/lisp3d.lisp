@@ -1,5 +1,5 @@
 ;;; lisp3d.lisp - Lisp 3d Edition by Winston and Horn
-;;; Time-stamp: <2023-10-01 10:08:17 wlh>
+;;; Time-stamp: <2023-10-02 21:16:32 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -158,5 +158,33 @@
 	 (clever-count-atoms (first tree)
 			     (clever-count-atoms (rest tree) count)))))
 
+;;; Problem 5-16 USER-DEFINED-LIST
+;;  Define USER-DEFINED-LIST to do what the primitive LIST does.  Use a
+;;  &REST parameter.
+
+(defun user-defined-list-wrong (&rest things)
+  (user-defined-list-aux things))
+
+(defun user-defined-list-aux (things)
+  (if (endp things) nil
+      (cons (first things)
+            (rest things))))
+
+(defun user-defined-list (&rest ls)
+  ls)
+
+;;; Problem 5-17 USER-DEFINED-NTHCDR
+;;  Define USER-DEFINED-NTHCDR in terms of IF, ZEROP, -, and REST.
+
+(defun user-defined-nthcdr (n l)
+  (if (zerop n) l
+      (user-defined-nthcdr (- n 1) (rest l))))
+
+;;; Problem 5-18 USER-DEFINED-LAST
+;;  Define USER-DEFINED-LAST in terms of IF, ENDP, and REST.
+
+(defun user-defined-last (l)
+  (if (endp (rest l)) l
+      (user-defined-last (rest l))))
 
 ;;; End lisp3d.lisp

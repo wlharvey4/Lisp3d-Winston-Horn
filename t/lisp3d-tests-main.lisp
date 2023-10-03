@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-01 09:41:19 wlh>
+;;; Time-stamp: <2023-10-02 21:13:34 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -71,5 +71,13 @@
 	     '(c b a)))
   (is (equal (clever-count-atoms '(sqrt (/ (+ (expt x 2) (expt y 2)) 2)))
 	     10)))
+
+(test chapter-5-tests-problem-5-16+
+  (is (equal (user-defined-list '(a b c) '(d e f))
+             '((a b c) (d e f))))
+  (is (equal (user-defined-nthcdr 3 '(a b c d e f))
+             '(d e f)))
+  (is (equal (user-defined-last '(a b c))
+             '(c))))
 
 ;;; End lisp3d-main-test.lisp
