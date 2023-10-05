@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-02 21:13:34 minilolh>
+;;; Time-stamp: <2023-10-04 22:19:34 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -13,6 +13,8 @@
 ;; (test dummytest
 ;;   (is (eq t t))
 ;;   (is (zerop 0)))
+
+;;; CHAPTER 5
 
 (test chapter-5-tests
   (is (equal (skip-first-n 3 '(a b c d e f g h i))
@@ -79,5 +81,26 @@
              '(d e f)))
   (is (equal (user-defined-last '(a b c))
              '(c))))
+
+;;; CHAPTER 6
+
+(test chapter-6-constructor-readers-writers
+  (let ((books (list
+                (make-book '(artificial intelligence)
+                           '(Patrick Henry Winston)
+                           '(technical ai))
+                (make-book '(Common Lisp)
+                           '(Guy L. Steele)
+                           '(technical lisp))
+                (make-book '(Moby Dick)
+                           '(Herman Melville)
+                           '(fiction))
+                (make-book '(Tom Sawyer)
+                           '(Mark Twain)
+                           '(fiction))
+                (make-book '(The Black Orchid)
+                           '(Rex Stout)
+                           '(fiction myster)))))
+    (format t "~a~%" books)))
 
 ;;; End lisp3d-main-test.lisp
