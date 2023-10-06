@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-04 22:19:34 minilolh>
+;;; Time-stamp: <2023-10-05 22:58:56 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -100,7 +100,20 @@
                            '(fiction))
                 (make-book '(The Black Orchid)
                            '(Rex Stout)
-                           '(fiction myster)))))
-    (format t "~a~%" books)))
+                           '(fiction mystery)))))
+    (is (equal (find-book-by-title-words '(orchid) books)
+               '((title (The Black Orchid))
+                 (author (Rex Stout))
+                 (classification (fiction mystery)))))
+    (is (equal (find-book-by-title-words '(black orchid) books)
+               '((title (The Black Orchid))
+                 (author (Rex Stout))
+                 (classification (fiction mystery)))))
+    (is (equal (find-book-by-title-words '(orchid black) books)
+               '((title (The Black Orchid))
+                 (author (Rex Stout))
+                 (classification (fiction mystery)))))
+    (is (equal (find-book-by-title-words '(blue orchid) books)
+               nil))))
 
 ;;; End lisp3d-main-test.lisp
