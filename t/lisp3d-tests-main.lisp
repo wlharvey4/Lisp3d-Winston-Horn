@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-09 22:18:18 minilolh>
+;;; Time-stamp: <2023-10-09 23:15:44 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -128,5 +128,10 @@
   (is (= 6 (dotimes-factorial 3)))
   (is (= 24 (dotimes-factorial 4)))
   (is (= 120 (dotimes-factorial 5))))
+
+(test chapter-7-count-if
+  (is (= 2 (count-outlyers-with-count-if '(31 32 212 213))))
+  (is (= 0 (count-outlyers-with-count-if '(32 212))))
+  (is (= 2 (count-outlyers-with-count-if '(0 32 212 273)))))
 
 ;;; End lisp3d-main-test.lisp
