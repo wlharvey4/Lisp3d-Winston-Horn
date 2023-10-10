@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-06 00:19:48 minilolh>
+;;; Time-stamp: <2023-10-09 22:18:18 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -119,5 +119,14 @@
         '((title (The Black Orchid))
                  (author (Rex Stout))
                  (classification (fiction mystery))))))
+
+;;; CHAPTER 7
+
+(test chapter-7-iteration
+  (is (= 1 (dotimes-factorial 1)))
+  (is (= 2 (dotimes-factorial 2)))
+  (is (= 6 (dotimes-factorial 3)))
+  (is (= 24 (dotimes-factorial 4)))
+  (is (= 120 (dotimes-factorial 5))))
 
 ;;; End lisp3d-main-test.lisp

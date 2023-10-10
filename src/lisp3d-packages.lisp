@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-10-05 23:47:00 minilolh>
+;;; Time-stamp: <2023-10-09 22:10:44 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -60,5 +60,10 @@
    :find-first-fiction-book
    :find-book-by-title-words
    ))
+
+(defpackage :lolh/lisp3d-chapter-7
+  (:use :cl)
+  (:export
+   :dotimes-factorial))
 
 ;;; End lisp3d-packages.lisp
