@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-09 23:15:44 minilolh>
+;;; Time-stamp: <2023-10-10 09:29:04 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -133,5 +133,18 @@
   (is (= 2 (count-outlyers-with-count-if '(31 32 212 213))))
   (is (= 0 (count-outlyers-with-count-if '(32 212))))
   (is (= 2 (count-outlyers-with-count-if '(0 32 212 273)))))
+
+(test chapter-7-list-outlyers-and-counts
+  (is (equal '(31 213) (list-outlyers '(31 32 212 213))))
+  (is (equal '() (list-outlyers '(32 212))))
+  (is (equal '(1 1) (list-outlyer-counts '(31 32 212 213))))
+  (is (equal '(0 0) (list-outlyer-counts '(32 212)))))
+
+(test chapter-7-dolist-member
+  (is (eq t (dolist-member 1 '(((1))))))
+  (is (eq nil (dolist-member 1 '(((2)))))))
+
+(test chapter-7-dolist-reverse
+  (is (equal '(3 2 1) (dolist-reverse '(1 2 3)))))
 
 ;;; End lisp3d-main-test.lisp

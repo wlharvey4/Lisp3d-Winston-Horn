@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-10-09 22:57:42 minilolh>
+;;; Time-stamp: <2023-10-10 09:28:23 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -65,6 +65,10 @@
   (:use :cl)
   (:export
    :dotimes-factorial
-   :count-outlyers-with-count-if))
+   :count-outlyers-with-count-if
+   :list-outlyers
+   :list-outlyer-counts
+   :dolist-member
+   :dolist-reverse))
 
 ;;; End lisp3d-packages.lisp
