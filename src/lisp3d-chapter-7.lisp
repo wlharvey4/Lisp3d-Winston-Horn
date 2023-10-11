@@ -1,5 +1,5 @@
 ;;; lisp3d-chapter-7.lisp -- Winston & Horn Lisp 3d Ed Chapter 7 Problems
-;;; Time-stamp: <2023-10-10 09:33:08 minilolh>
+;;; Time-stamp: <2023-10-10 18:05:15 minilolh>
 
 ;;; Author: LOLH <lincolnlaw@mac.com>
 ;;; Created: 2023-10-09
@@ -75,5 +75,26 @@ RECURSIVE-MEMBER.  Return T if the item is a member."
   (let ((reversed-l nil))
     (dolist (i l reversed-l)
       (push i reversed-l))))
+
+;;; PROBLEM 7-7 DO-FACTORIAL
+(defun do-factorial (x)
+  "Define DO-FACTORIAL using a DO form with an empty body."
+  (do ((result 1 (* result y))
+       (y x (1- y)))
+      ((zerop y) result)))
+
+;; (defun recursive-member (item l)
+;;   (cond ((endp l) nil)
+;;         ((eql item (first l)) l)
+;;         (t (recursive-member item (rest l)))))
+
+;;; PROBLEM 7-8 DO-MEMBER
+(defun do-member (item l)
+  "Write D0-MEMBER, an iterative version of RECURSIVE-MEMBER (above)
+using DO. Return the remainder of the list when the item is encountered."
+  (do ((list l (rest list)))
+      ((or (endp list)
+           (eql item (first list)))
+       list)))
 
 ;;; End lisp3d-chapter-7.lisp

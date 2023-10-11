@@ -1,5 +1,5 @@
 ;;; lisp3d-tests-main.lisp - Main test file
-;;; Time-stamp: <2023-10-10 09:29:04 minilolh>
+;;; Time-stamp: <2023-10-10 17:56:24 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -146,5 +146,14 @@
 
 (test chapter-7-dolist-reverse
   (is (equal '(3 2 1) (dolist-reverse '(1 2 3)))))
+
+(test chapter-7-do-tests
+  (is (= 1 (do-factorial 1)))
+  (is (= 2 (do-factorial 2)))
+  (is (= 6 (do-factorial 3)))
+  (is (= 24 (do-factorial 4)))
+  (is (= 120 (do-factorial 5)))
+  (is (equal '(2 3 4) (do-member 2 '(1 2 3 4))))
+  (is (eq nil (do-member 1 '(2 3 4)))))
 
 ;;; End lisp3d-main-test.lisp
