@@ -1,5 +1,5 @@
 ;;; lisp3d-packages.lisp - Package file for Lisp 3d Edition Winston-Horn
-;;; Time-stamp: <2023-10-10 17:48:52 minilolh>
+;;; Time-stamp: <2023-10-17 22:52:13 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -72,5 +72,11 @@
    :dolist-reverse
    :do-factorial
    :do-member))
+
+(defpackage :lolh/lisp3d-chapter-9
+  (:use :cl)
+  (:export
+   :tower-of-hanoi
+   :tower-of-hanoi-with-instructions))
 
 ;;; End lisp3d-packages.lisp

@@ -1,5 +1,5 @@
 ;;; lisp3d.asd - ASD file for Lisp3d Edition by Winston-Horn
-;;; Time-stamp: <2023-10-10 18:48:46 minilolh>
+;;; Time-stamp: <2023-10-17 22:53:27 minilolh>
 
 ;;; Author: LOLH
 ;;; Created: 2023-09-24
@@ -24,6 +24,8 @@
                               :depends-on ("lisp3d-packages"
                                            "lisp3d-chapter-6-books"))
                              (:file "lisp3d-chapter-7"
+                              :depends-on ("lisp3d-packages"))
+                             (:file "lisp3d-chapter-9"
                               :depends-on ("lisp3d-packages")))))
   :in-order-to ((test-op (test-op "lolh-lisp3d/tests"))))
 
